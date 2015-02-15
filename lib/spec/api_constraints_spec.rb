@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'api_constraints'
 
 describe ApiConstraints do 
 	let(:api_constraints_v1) { ApiConstraints.new(version: 1) }
@@ -12,7 +13,7 @@ describe ApiConstraints do
 
 		it "returns the default version when 'default' option is specified" do
 			request = double(host: 'api.medybox.dev')
-			api_constraints_v2.matches?(request).should be_true
+			expect(api_constraints_v2.matches?(request)).to eq(true)
 		end
 	end
 end
