@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'turbolinks'
+#gem 'jquery-ui-rails'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -29,6 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #Api gems
 gem 'active_model_serializers'
 
+gem 'pg'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -40,7 +44,6 @@ group :development, :test do
   gem 'spring'
 
   #gem 'sqlite3'
-  gem 'pg'
   
   gem "rspec-rails"
   gem "factory_girl_rails"
@@ -48,12 +51,10 @@ group :development, :test do
 end
 
 group :test do
-  gem 'pg'
 	gem "ffaker"
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
